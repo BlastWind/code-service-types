@@ -555,9 +555,9 @@ declare namespace CbServer {
 
   interface TriggersAsync {
     create(option: Omit<TriggerCreateOptions, "system_key">): Promise<object>;
-    read(query: Query): Promise<object[]>;
-    update(query: Query, changes: object): Promise<object[]>;
-    delete(query: Query): Promise<object>;
+    read(query: AsyncPlatformQuery): Promise<object[]>;
+    update(query: AsyncPlatformQuery, changes: object): Promise<object[]>;
+    delete(query: AsyncPlatformQuery): Promise<object>;
   }
 
   interface RolesAsync {
